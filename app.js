@@ -852,5 +852,74 @@ let num = 0;
 // myH1.style.backgroundColor = 'black';
 // const bodyParent = document.body;
 // bodyParent.append(myH1);
-const pOne = document.getElementById('one');
-alert(pOne.textContent)
+// const pOne = document.getElementById('one');
+// alert(pOne.textContent);
+
+// function changeBg() {
+//     document.body.style.backgroundColor = 'brown';
+//     alert(`you changed the background color to brown`);
+// }
+// const myBtn = document.getElementById('btn');
+// myBtn.addEventListener('dblclick', function (){
+//     const myP = document.getElementById('one');
+//     myP.textContent = 'KING DAVID';
+//     myP.style.color = 'white';
+//     myP.style.backgroundColor = 'pink';
+//     myP.style.fontFamily = 'sans-serif';
+//     myP.style.padding = '20px'
+// })
+
+const clickBtn = document.getElementById('clickBtn');
+const dblclickBtn = document.getElementById('dblclickBtn');
+const hoverBtn = document.getElementById('hoverBtn');
+const mouseDownBtn = document.getElementById('mouseDownBtn');
+const mouseUpBtn = document.getElementById('mouseUpBtn');
+
+// clickBtn.addEventListener('click', function() {
+//     document.body.style.backgroundColor = 'red';
+//     document.body.style.textAlign = 'center';
+// })
+
+// dblclickBtn.addEventListener('dblclick', function() {
+//     document.body.style.backgroundColor = 'black';
+//     document.body.style.color = 'white';
+// })
+
+const form = document.getElementById('myForm');
+const inputText = document.getElementById('inputText');
+// form.addEventListener('submit', function(e) {
+//     e.preventDefault();
+//     alert('form submitted' + ' ' +  inputText.value);
+// })
+// inputText.addEventListener('focus', function(){
+//     document.body.style.backgroundColor = 'red';
+//     document.body.style.color = 'white';
+// })
+// inputText.addEventListener('blur', function() {
+//     document.body.style.backgroundColor = 'red';
+// })
+
+// inputText.addEventListener('keydown', function(){
+//     document.body.style.backgroundColor = 'red';
+// })
+// inputText.addEventListener('keyup', function(){
+//     document.body.style.backgroundColor = 'red';
+// })
+// window.addEventListener('load', function() {
+//     document.body.style.backgroundColor = 'red';
+// })
+// window.addEventListener('scroll', function() {
+//     document.body.style.backgroundColor = 'red';
+// })
+// window.addEventListener('resize', function() {
+//     document.body.style.backgroundColor = 'red';
+// })
+
+// const screen = document.getElementById('display');
+// const btn = document.getElementById('btn');
+// btn.addEventListener('click', function(){
+//     const birthYear = document.getElementById('userYear').value;
+//     const currentYear = new Date().getFullYear();
+//     const year = currentYear - birthYear;
+// })
+
