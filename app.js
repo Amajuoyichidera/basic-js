@@ -915,11 +915,58 @@ const inputText = document.getElementById('inputText');
 //     document.body.style.backgroundColor = 'red';
 // })
 
-// const screen = document.getElementById('display');
+
 // const btn = document.getElementById('btn');
-// btn.addEventListener('click', function(){
-//     const birthYear = document.getElementById('userYear').value;
+// const display = document.getElementById('display');
+// btn.addEventListener('click', function(e){
+//     e.preventDefault();
 //     const currentYear = new Date().getFullYear();
-//     const year = currentYear - birthYear;
+//     const userYear = document.getElementById('input').value;
+//     if(userYear !== '') {
+//         const age = currentYear - userYear;
+//         display.textContent = `you are ${age} years old`;
+//     }else {
+//         display.textContent = 'Input your birth year';
+//     }
 // })
 
+// const changeBtn = document.getElementById('change');
+// changeBtn.addEventListener('click', function() {
+//     const colors = ['red', 'blue', 'pink', 'brown', 'purple', 'orange', 'green'];
+//     const random = Math.floor(Math.random() * colors.length);
+//     document.body.style.backgroundColor = colors[random];
+// })
+
+// let anything = setInterval(function(){
+//     const colors = ['red', 'blue', 'pink', 'brown', 'purple', 'orange', 'green'];
+//     const random = Math.floor(Math.random() * colors.length);
+//     document.body.style.backgroundColor = colors[random];
+// }, 2000);
+
+//   /\s+/
+
+
+// const btn = document.getElementById('btn');
+// const myScreen = document.getElementById('screen');
+// btn.addEventListener('click', function(){
+//     let combo = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!~@#$%^&*()}{:"?><|';
+//     let password = '';
+//     let length = document.getElementById('input').value;
+//     for(let i = 0; i < length; i++) {
+//         let randomNum = Math.floor(Math.random() * combo.length);
+//         password += combo[randomNum];
+//     }
+//     myScreen.textContent = `your random password is:   ${password}`;
+// })
+
+const btn = document.getElementById('btn');
+const myScreen = document.getElementById('screen');
+btn.addEventListener('click', function(){
+    const num =  document.getElementById('input').value;
+    if(num > 0) {
+        const interval = setInterval(function(){
+            num--;
+            myScreen.textContent = num;
+        }, 2000)
+    }
+})
