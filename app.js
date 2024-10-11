@@ -959,14 +959,82 @@ const inputText = document.getElementById('inputText');
 //     myScreen.textContent = `your random password is:   ${password}`;
 // })
 
-const btn = document.getElementById('btn');
-const myScreen = document.getElementById('screen');
-btn.addEventListener('click', function(){
-    const num =  document.getElementById('input').value;
-    if(num > 0) {
-        const interval = setInterval(function(){
-            num--;
-            myScreen.textContent = num;
-        }, 2000)
-    }
-})
+// const btn = document.getElementById('btn');
+// const myScreen = document.getElementById('display');
+// btn.addEventListener('click', function() {
+//     let num = Number(document.getElementById('input').value);
+//     if(num > 0) {
+//         const myInterval = setInterval(function(){
+//             myScreen.textContent = num;
+//             num--;
+//             if(num < 0) {
+//                 clearInterval(myInterval);
+//                 myScreen.textContent = "Time's Up";
+//             }
+//         }, 2000)
+//     }
+// })
+
+const screen = document.getElementById('screen');
+let num1 = '';
+let num2 = '';
+let operator = '';
+let result = '';
+
+document.querySelectorAll('.btn').forEach(button => {
+    button.addEventListener('click', function() {
+        const value = button.getAttribute('data-num') || button.getAttribute('data-op');
+
+        if (!isNaN(value)) {  // If it's a number
+            if (operator === '') {
+                // Build the first number (num1)
+                num1 += value;
+                screen.textContent = num1;
+            } else {
+                // Build the second number (num2) after an operator is selected
+                num2 += value;
+                screen.textContent = num2;
+            }
+        } else if (value === '*' || value === '/' || value === '+' || value === '-') {           
+                operator = value;
+                screen.textContent = operator;
+        }
+    });
+});
+
+// Event listener for the equal button
+document.getElementById('equal').addEventListener('click', function() {
+    const num1Rep = parseFloat(num1);
+    const num2Rep = parseFloat(num2);
+
+  
+        switch (operator) {
+            case '+':
+                result = num1Rep + num2Rep;
+                break;
+            case '/':
+                result = num1Rep / num2Rep;
+                break;
+            case '-':
+                result = num1Rep - num2Rep;
+                break;
+            case '*':
+                result = num1Rep * num2Rep;
+                break;
+        }
+        screen.textContent = result;
+
+        // Reset values after calculation
+        num1 = result.toString();
+        num2 = '';
+        operator = '';
+    
+});
+
+// Event listener for the clear button
+document.getElementById('clear').addEventListener('click', function() {
+    num1 = '';
+    num2 = '';
+    operator = '';
+    screen.textContent = '';
+});
