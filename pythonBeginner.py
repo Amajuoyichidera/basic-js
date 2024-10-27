@@ -110,7 +110,24 @@ food = {
 #     result = num * count
 #     print(f'{num} x {count} = {result}')
 
-combo = 0
-for count in range(1, 100):
-    combo = combo + count
-print(f'{combo}')
+# combo = 0
+# for count in range(1, 100):
+#     combo = combo + count
+# print(f'{combo}')
+
+
+# 13 students have taken an exam. Their scores are: 10, 15, 10, 9, 18, 16, 14, 12, 16, 13, 15, 20, and 17.
+
+# You are a teacher and need to help recording these grades.
+
+# Create a list of these scores and assign it to a variable named marks.
+
+# Arrange the elements of marks in descending order.
+
+
+# solution: 
+
+# marks = [10, 15, 10, 9, 18, 16, 14, 12, 16, 13, 15, 20, 17]
+# marks.sort()
+# marks.reverse()
+# print(marks)
